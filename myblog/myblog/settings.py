@@ -14,7 +14,7 @@ from pathlib import Path
 import json
 
 # read the config file
-with open('/etc/secret_key.txt') as f:
+with open('myblog/config.json') as f:
     config_file = json.load(f)
 
 
