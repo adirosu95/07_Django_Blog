@@ -1,0 +1,18 @@
+{% extends "blog/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <div class="content-section">
+        <form method="POST">{% csrf_token %}
+            {% if err %}
+                <span class="error text-danger">Sorry! This email already exists.</span>
+            {% endif %}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Newsletter Sign In</legend>
+                {{ form|crispy }}
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-outline-info" type="submit">Subscribe</button>
+            </div>
+        </form>
+    </div>
+{% endblock content %}
