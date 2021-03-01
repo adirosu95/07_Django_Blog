@@ -3,6 +3,7 @@ from . import views
 
 
 urlpatterns = [
-    path('newsletter-subscribe/', views.newsletter_signup, name='newsletter-subscribe')
-    # path('newsletter-unsubscribe/', views.newsletter_signup, name='newsletter-unsubscribe')
+    path(r'newsletter-subscribe/', views.newsletter_signup, name='newsletter-subscribe'),
+    path(r'newsletter-unsubscribe/', views.newsletter_unsubscribe, name='newsletter-unsubscribe')
 ]
+
